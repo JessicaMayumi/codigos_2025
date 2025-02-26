@@ -1,23 +1,25 @@
-public class JogoDaVelha_PC extends JogoDaVelha_Mapa {
+public class JogoDaVelha_PC {
     private JogoDaVelha_Mapa mapa;
-    private char letra;
+    private char letra = 'O';
+    boolean valido;
+    int linha;
+    int coluna;
 
-    public JogoDaVelha_PC(JogoDaVelha_Mapa mapa){
-        letra = 'O';
+    public JogoDaVelha_PC(JogoDaVelha_Mapa mapa) { 
+        this.mapa = mapa; 
     }
 
     public boolean joga(){
-        boolean posicaoValida = false;
-        while(posicaoValida == false){
-            int linhaPC = this.mapa.sortear(0,2);
-            int colunaPC = this.mapa.sortear(0, 2);
-            if(this.mapa.jogar(linhaPC, colunaPC, letra)){
-                this.mapa.ganhou(letra);
-                System.out.println(". . . PC GANHOU!");
-                posicaoValida = true;
-            }
-                 
+        do {
+            linha = mapa.sortear(0, 3);
+            coluna = mapa.sortear(0, 3);
+            valido = mapa.jogar(linha, coluna, letra);
+        } while (!valido);
+        if(mapa.ganhou(letra)){ 
+            System.out.println(". . . PC GANHOU!"); 
         }
-        return posicaoValida;
+        return true;
     }
+
 }
+
