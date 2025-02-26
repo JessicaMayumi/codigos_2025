@@ -10,6 +10,17 @@ public class JogoDaVelha_Jogador extends JogoDaVelha_Mapa {
     }
 
     public boolean joga(Scanner teclado){
-
+        int linhaJogador = teclado.nextInt();
+        int colunaJogador = teclado.nextInt();
+        boolean posicaoValida = false;
+        while (posicaoValida == false) {
+            if(this.mapa.jogar(linhaJogador, colunaJogador, letra)){
+                this.mapa.ganhou(letra);
+                System.out.println(". . . PC GANHOU!");
+                posicaoValida = true;
+            }
+            
+        }
+        return posicaoValida;
     }
 }

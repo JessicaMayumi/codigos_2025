@@ -9,7 +9,7 @@ public class JogoDaVelha_Mapa {
 
     public int sortear(int inicio, int fim){
         Random sorteio = new Random();
-        return sorteio.nextInt(fim - inicio + 1) + inicio;
+        return sorteio.nextInt(fim - inicio + 1) + inicio; // entender melhor como funciona
     }
 
     public void limpaMapa(){

@@ -7,7 +7,17 @@ public class JogoDaVelha_PC extends JogoDaVelha_Mapa {
     }
 
     public boolean joga(){
-        int linhaPC = sortear(0,2);
-        int colunaPC = sortear(0, 2)
+        boolean posicaoValida = false;
+        while(posicaoValida == false){
+            int linhaPC = this.mapa.sortear(0,2);
+            int colunaPC = this.mapa.sortear(0, 2);
+            if(this.mapa.jogar(linhaPC, colunaPC, letra)){
+                this.mapa.ganhou(letra);
+                System.out.println(". . . PC GANHOU!");
+                posicaoValida = true;
+            }
+                 
+        }
+        return posicaoValida;
     }
 }
