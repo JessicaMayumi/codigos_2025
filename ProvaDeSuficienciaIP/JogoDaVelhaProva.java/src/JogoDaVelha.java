@@ -28,6 +28,7 @@ public class JogoDaVelha {
             JogoDaVelha_Jogador jogoJogador = new JogoDaVelha_Jogador(jogoMapa);
             JogoDaVelha jogo = new JogoDaVelha(jogoJogador, jogoMapa, jogoPC);
             jogo.jogar(teclado);
+            System.out.println("________________________");
             System.out.print("Deseja jogar novamente (s/n)? ");
         } while (
             teclado.next().equalsIgnoreCase("s")
@@ -70,6 +71,7 @@ public class JogoDaVelha {
             if (jogadorPrimeiro) {
                 jogoJogador.joga(teclado);
                 if (jogoMapa.ganhou('X')) {
+                    jogoMapa.desenha(jogadas);
                     return;
                 }
             } else {
@@ -82,6 +84,7 @@ public class JogoDaVelha {
             jogadorPrimeiro = !jogadorPrimeiro;
             jogadas++;
         }
+        jogoMapa.desenha(jogadas);
         System.out.println("... EMPATOU!");
 
     }
