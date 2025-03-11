@@ -9,8 +9,9 @@ public class Exercicio01 {
         float x = teclado.nextFloat();
         System.out.print("Insira outro número: ");
         float y = teclado.nextFloat();
+        float area = x*y;
 
             
-        System.out.printf("Resultado: %s", x*y);
+        System.out.printf("Resultado: %s", area);
     }
 }

@@ -3,11 +3,10 @@ import java.util.Scanner;
 public class Exercicio15 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        int numero;
-                do{
-                    System.out.print("Escreva um número válido de até 3 dígitos: ");
-                    numero = teclado.nextInt();
-                } while (numero >=1000);
+        
+        System.out.print("Escreva um número válido de até 3 dígitos: ");
+        int numero = teclado.nextInt();
+    
         
         int centenas = numero/100;
         numero = numero%100;

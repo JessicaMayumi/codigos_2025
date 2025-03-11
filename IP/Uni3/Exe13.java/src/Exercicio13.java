@@ -15,6 +15,6 @@ public class Exercicio13 {
 
         float valorPagar = valorMQ * totalMQ;
 
-        System.out.printf("R$%.2f", valorPagar);
+        System.out.printf("O valor final é $%.2f", valorPagar);
     }
 }
