@@ -11,7 +11,7 @@ public class Exercicio03 {
 
         float litroTanque = valorPagar/valorGasolina;
 
-        System.out.printf("O motorista conseguiu colocar: %.2f litros", litroTanque);
+        System.out.printf("O motorista conseguiu colocar: %.2f", litroTanque);
 
         teclado.close();
     }

@@ -13,6 +13,6 @@ public class Exercicio04 {
 
         float media = (n1 * 0.5f) + (n2 * 0.3f) + (n3 * 0.2f);
 
-        System.out.printf("%.2f", media);
+        System.out.println(media);
     }
 }

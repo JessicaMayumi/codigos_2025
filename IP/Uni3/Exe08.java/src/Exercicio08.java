@@ -9,9 +9,8 @@ public class Exercicio08 {
 
         System.out.print("Cotacao: ");
         float cotacao = teclado.nextFloat();
-        float devolucao = cotacao*valor;
 
-        System.out.printf("O atendente deve devolver R$%.2f para o cliente.", devolucao);
+        System.out.printf("O atendente deve devolver R$%.2f para o cliente.", cotacao*valor);
 
         
     }
